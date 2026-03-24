@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolae Ungur - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<canvas id="noise-canvas"></canvas>
+<canvas id="constellation-canvas"></canvas>
+
+<div class="nav-wrapper">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#about" class="glitch" data-text="About">About</a></li>
+            <li><a href="#projects" class="glitch" data-text="Projects">Projects</a></li>
+            <li><a href="#skills" class="glitch" data-text="Skills">Skills</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle><i data-lucide="moon"></i></button>
+    </nav>
+</div>
+
+<main>
+    <section id="hero">
+        <h1>Nicolae Ungur</h1>
+        <p>Student pursuing a degree in computer science at the Paul G. Allen School of Computer Science & Engineering. Passionate about developing applications and systems.</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-inner">
+            <div class="avatar"></div>
+            <p>A short paragraph about who you are, what you do, and what you care about. Keep it human and direct.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Project One</h3>
+                <p>Short description of what this project does.</p>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Project Two</h3>
+                <p>Short description of what this project does.</p>
+                <div class="card-tags">
+                    <span class="tag">JS</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Project Three</h3>
+                <p>Short description of what this project does.</p>
+                <div class="card-tags">
+                    <span class="tag">React</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span class="tag">C++</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Nicolae Ungur</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
