@@ -8,7 +8,6 @@
 
 #include "indexer.h"
 
-#include "json/JsonBoolean.h"
 
 
 using asio::ip::tcp;
@@ -18,7 +17,6 @@ bool github_request(const std::string& path, std::string* result);
 void index(const std::string& profile) {
     std::string profile_query;
     github_request("users/"+profile+"/repos", &profile_query);
-    JsonBoolean test = JsonBoolean("\"private\": false");
     std::cout << profile_query << std::endl;
 }
 

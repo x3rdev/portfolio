@@ -16,7 +16,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(asio_src)
 
-add_library(asio_headers INTERFACE)
+add_library(asio_headers INTERFACE
+        src/indexer/json/JsonObject.cpp
+        src/indexer/json/JsonObject.h)
 target_include_directories(asio_headers INTERFACE
         ${asio_src_SOURCE_DIR}/asio/include
 )
@@ -34,10 +36,19 @@ find_package(OpenSSL REQUIRED)
 # Main executable
 # ---------------------------
 add_executable(portfolio
-        main.cpp
-        web_server/web_server.cpp
-        indexer/indexer.cpp
-        indexer/indexer.h
+        src/main.cpp
+        src/web_server/web_server.cpp
+        src/indexer/indexer.cpp
+        src/indexer/indexer.h
+        src/indexer/json/JsonObject.cpp
+        src/indexer/json/JsonObject.h
+        src/indexer/json/JsonArray.cpp
+        src/indexer/json/JsonArray.h
+        src/indexer/json/JsonElement.h
+        src/indexer/json/JsonPair.h
+        src/indexer/json/JsonParser.cpp
+        src/indexer/json/JsonParser.h
+        src/indexer/json/JsonPair.cpp
 )
 
 # Include directories

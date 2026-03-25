@@ -4,7 +4,7 @@
 #include <thread>
 #include <unordered_map>
 
-#include "indexer/indexer.h"
+#include "../indexer/indexer.h"
 #include "web_server/web_server.h"
 
 void usage();

@@ -91,13 +91,13 @@ std::string handle_request(const std::string& request) {
     std::string file_path;
     std::string content_type = "text/html";
     if (target == "/" || target == "/index.html") {
-        file_path = "../public/index.html";
+        file_path = "../resources/index.html";
         content_type = "text/html";
     } else if (target == "/styles.css") {
-        file_path = "../public/styles.css";
+        file_path = "../resources/styles.css";
         content_type = "text/css";
     } else if (target == "/app.js") {
-        file_path = "../public/app.js";
+        file_path = "../resources/app.js";
         content_type = "application/javascript";
     } else {
         return build_response("<h1>404 Not Found</h1>");
