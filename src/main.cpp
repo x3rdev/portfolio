@@ -4,7 +4,6 @@
 #include <thread>
 #include <unordered_map>
 
-#include "../indexer/indexer.h"
 #include "web_server/web_server.h"
 
 void usage();
@@ -27,7 +26,7 @@ int main() {
             break;
         }
         if (input == "index") {
-            index("x3rdev");
+            // index("x3rdev");
         } else {
             usage();
         }

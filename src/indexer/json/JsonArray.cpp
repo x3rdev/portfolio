@@ -1,12 +1,21 @@
 //
-// Created by nicol on 3/23/2026.
+// Created by nicol on 3/28/2026.
 //
 
 #include "JsonArray.h"
 
-JsonArray::JsonArray(std::vector<std::unique_ptr<JsonElement>>& elements) {
-    for (auto& elem : elements) {
-        elements_.push_back(std::unique_ptr<JsonElement>(elem.release()));
-    }
+#include <algorithm>
 
+JsonArray::JsonArray(const std::string_view& cursor) {
+    auto input_str = std::string(cursor);
+    input_str.erase(std::remove_if(input_str.begin(), input_str.end(), isspace), input_str.end());
+
+    if (input_str.front() == '[' && input_str.back() == ']') {
+        int i = 0;
+        while (i < input_str.length()) {
+
+        }
+    } else {
+        value_ = nullptr;
+    }
 }
